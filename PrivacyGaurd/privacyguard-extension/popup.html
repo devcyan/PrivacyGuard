@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PrivacyGuard AI</title>
+  <style>
+    body {
+      font-family: Arial;
+      padding: 15px;
+      width: 350px;
+      background: #f4f6f9;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    .risk-low {
+      color: green;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .risk-medium {
+      color: orange;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .risk-high {
+      color: red;
+      font-weight: bold;
+      font-size: 20px;
+    }
+
+    .section {
+      margin-top: 12px;
+    }
+
+    .loading {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+  <h2>PrivacyGuard AI Report</h2>
+  <div id="output" class="loading">Analyzing...</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
