@@ -1,6 +1,6 @@
-# PrivacyGuard AI
+# PrivacyGuard
 
-PrivacyGuard AI is a locally hosted, machine learning-powered Chrome Extension that analyzes website privacy policies and terms of service in real-time. It assigns a 0-100 "Risk Score" based on how a company handles user data, tracks locations, and shares information with third parties.
+PrivacyGuard is a locally hosted, machine learning-powered Chrome Extension that analyzes website privacy policies and terms of service in real-time. It assigns a 0-100 "Risk Score" based on how a company handles user data, tracks locations, and shares information with third parties.
 
 ## 🚀 Features
 
@@ -12,7 +12,7 @@ PrivacyGuard AI is a locally hosted, machine learning-powered Chrome Extension t
 ## 📂 Project Structure
 
 ```text
-PrivacyGuard-AI/
+PrivacyGuard/
 │
 ├── extension/                  # Chrome Extension Frontend
 │   ├── manifest.json           # Extension configuration & permissions
