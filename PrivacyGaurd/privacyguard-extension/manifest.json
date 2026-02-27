@@ -1,6 +1,6 @@
 {
   "manifest_version": 3,
-  "name": "PrivacyGuard AI",
+  "name": "PrivacyGuard",
   "version": "4.0",
   "description": "AI-powered privacy policy analyzer (0-100 scoring)",
 
@@ -21,3 +21,4 @@
     "service_worker": "background.js"
   }
 }
+
