@@ -5,23 +5,19 @@
   "description": "AI-powered privacy policy analyzer (0-100 scoring)",
 
   "permissions": [
-    "storage",
-    "activeTab"
+    "activeTab",
+    "scripting"
   ],
 
   "host_permissions": [
-    "http://localhost:5000/*",
-    "<all_urls>"
+    "http://localhost:5000/*"
   ],
 
   "action": {
     "default_popup": "popup.html"
   },
-
-  "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "js": ["content.js"]
-    }
-  ]
+  
+  "background": {
+    "service_worker": "background.js"
+  }
 }
