@@ -1,52 +1,128 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>PrivacyGuard AI</title>
+  <title>PrivacyGuard</title>
   <style>
+    :root {
+      --primary: #2563eb;
+      --primary-hover: #1d4ed8;
+      --secondary: #e2e8f0;
+      --secondary-hover: #cbd5e1;
+      --text-dark: #1e293b;
+      --text-muted: #64748b;
+      --bg-color: #f8fafc;
+      --card-bg: #ffffff;
+    }
+
     body {
-      font-family: Arial;
-      padding: 15px;
-      width: 350px;
-      background: #f4f6f9;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      padding: 16px;
+      width: 360px;
+      background: var(--bg-color);
+      color: var(--text-dark);
+      margin: 0;
     }
 
+    h2 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 22px;
+      color: var(--text-dark);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Modern Button Layout */
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+      font-size: 14px;
+      transition: all 0.2s ease;
+    }
+
+    #btn-site {
+      background: var(--primary);
+      color: white;
+      box-shadow: 0 2px 4px rgba(37, 99, 235, 0.2);
+    }
+
+    #btn-site:hover {
+      background: var(--primary-hover);
+    }
+
+    #btn-page {
+      background: var(--secondary);
+      color: var(--text-dark);
+    }
+
+    #btn-page:hover {
+      background: var(--secondary-hover);
+    }
+
+    /* Output Card Styling */
     .card {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      background: var(--card-bg);
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      border: 1px solid #e2e8f0;
     }
 
-    .risk-low {
-      color: green;
-      font-weight: bold;
-      font-size: 20px;
+    .status-text {
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+      padding: 10px 0;
     }
 
-    .risk-medium {
-      color: orange;
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    .risk-high {
-      color: red;
-      font-weight: bold;
-      font-size: 20px;
-    }
+    /* Risk Colors */
+    .risk-low { color: #16a34a; font-weight: 800; font-size: 22px; }
+    .risk-medium { color: #ea580c; font-weight: 800; font-size: 22px; }
+    .risk-high { color: #dc2626; font-weight: 800; font-size: 22px; }
 
     .section {
-      margin-top: 12px;
+      margin-top: 14px;
+      font-size: 14px;
+      line-height: 1.5;
     }
 
-    .loading {
-      color: gray;
+    .section b {
+      color: var(--text-dark);
+    }
+
+    .recommendation {
+      background: #fffbeb;
+      border-left: 4px solid #f59e0b;
+      padding: 10px;
+      margin-top: 12px;
+      border-radius: 0 6px 6px 0;
+      font-size: 13px;
     }
   </style>
 </head>
 <body>
-  <h2>PrivacyGuard AI Report</h2>
-  <div id="output" class="loading">Analyzing...</div>
+  <h2>PrivacyGuard</h2>
+  
+  <div class="btn-container">
+    <button id="btn-site">Scan This Website</button>
+    <button id="btn-page">Scan This Page</button>
+  </div>
+
+  <div id="output">
+      <div class="card status-text">Ready to scan.</div>
+  </div>
 
   <script src="popup.js"></script>
 </body>
